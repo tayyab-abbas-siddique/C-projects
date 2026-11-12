@@ -44,8 +44,15 @@ int main() {
     }
     // Division
     else if (user_option == 4){
-        int div = fisrt_number / second_number;
-        printf("%i\n", div);
+        // Zero division handling
+        if (second_number == 0){
+            printf("Division by zero is not allowed\n");
+        }
+
+        else{
+            int div = fisrt_number / second_number;
+            printf("%i\n", div);
+        }
     }
     // Modulus
     else{
